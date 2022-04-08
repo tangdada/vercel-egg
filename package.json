@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "npx vercel --prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,8 @@
   "dependencies": {
     "mongodb": "^4.5.0",
     "mongoose": "^6.2.10"
+  },
+  "devDependencies": {
+    "@vercel/node": "^1.14.0"
   }
 }
