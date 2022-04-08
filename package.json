@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/tangdada/vercel-egg/issues"
   },
-  "homepage": "https://github.com/tangdada/vercel-egg#readme"
+  "homepage": "https://github.com/tangdada/vercel-egg#readme",
+  "dependencies": {
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.2.10"
+  }
 }
