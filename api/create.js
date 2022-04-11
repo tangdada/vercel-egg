@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
-import { mongoLink, DietModel } from './db'
+import { mongoServer, DietModel } from './db'
 
 module.exports = async (req, res) => {
-    mongoose.connect(mongoLink)
+    mongoose.connect(mongoServer)
     const id = req.headers['x-real-ip'].split('.').reverse().join('')
 
     try {
