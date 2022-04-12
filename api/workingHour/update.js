@@ -6,14 +6,16 @@ module.exports = async (req, res) => {
         // const id = req.headers['x-real-ip'].split('.').reverse().join('')
         const id = req.headers['host'].split('.').reverse().join('')
         // const name = req.query.name
-        const { startTime, endTime, job, gender, age } = req.query
+        const { startTime, endTime, job, gender, age, company, remark } = req.query
         const workHourVo = {
             id,
             startTime,
             endTime,
             job,
+            company,
             gender,
             age,
+            remark,
             updateTime: new Date().getTime()
         }
         const oldWorkingHour = await WorkingHour.findOneAndUpdate({ id }, workHourVo)
