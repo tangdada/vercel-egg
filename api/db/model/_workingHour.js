@@ -16,7 +16,7 @@ const WorkHourSchema = {
     },
     company: {
         type: String,
-        maxlength: 16
+        maxlength: [16, '公司名称最长16个字']
     },
     gender: {
         type: String,
@@ -27,7 +27,7 @@ const WorkHourSchema = {
     },
     remark: {
         type: String,
-        maxlength: 140
+        maxlength: [140, '备注最长140个字']
     },
     createTime: {
         type: Number
