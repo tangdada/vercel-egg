@@ -20,7 +20,7 @@ const WorkHourSchema = {
     },
     gender: {
         type: String,
-        maxlength: ['男', '女']
+        enum: ['男', '女']
     },
     age: {
         type: String
