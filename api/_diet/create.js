@@ -1,5 +1,5 @@
 // const mongoose = require('mongoose')
-const { Diet, User } = require('../db')
+const { Diet, User } = require('../db/_index')
 
 module.exports = async (req, res) => {
     try {
@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
         const dietVo = {
             userName,
             food,
-            createTime: new Date().getTime(),
+            createTime: new Date().getTime()
         }
 
         await validateDiet(dietVo)

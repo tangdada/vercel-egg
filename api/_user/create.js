@@ -1,11 +1,11 @@
 // const mongoose = require('mongoose')
-const { User } = require('../db')
+const { User } = require('../db/_index')
 
 module.exports = async (req, res) => {
     try {
         const name = req.query.name
         const userVo = {
-            name,
+            name
         }
 
         await validateUser(userVo)

@@ -1,5 +1,5 @@
 // const mongoose = require('mongoose')
-const { WorkingHour } = require('../db')
+const { WorkingHour } = require('../db/_index')
 
 module.exports = async (req, res) => {
     try {
@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
             job,
             gender,
             age,
-            updateTime: new Date().getTime(),
+            updateTime: new Date().getTime()
         }
         const oldWorkingHour = await WorkingHour.findOneAndUpdate({ id }, workHourVo)
         res.status(200).json(oldWorkingHour)

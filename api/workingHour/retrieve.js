@@ -1,5 +1,5 @@
 // const mongoose = require('mongoose')
-const { WorkingHour } = require('../db')
+const { WorkingHour } = require('../db/_index')
 
 module.exports = async (req, res) => {
     try {
@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
                 } else {
                     res.status(200).json({
                         list: doc,
-                        page: { pageNo: parseInt(pageNo), pageSize, total },
+                        page: { pageNo: parseInt(pageNo), pageSize, total }
                     })
                 }
             })

@@ -3,11 +3,11 @@ const express = require('express')
 let app = express()
 
 app.get('/', require('./api/hello'))
-app.get('/diet/retrieve', require('./api/diet/retrieve'))
-app.get('/diet/create', require('./api/diet/create'))
+app.get('/diet/retrieve', require('./api/_diet/retrieve'))
+app.get('/diet/create', require('./api/_diet/create'))
 
-app.get('/user/create', require('./api/user/create'))
-app.get('/user/retrieve', require('./api/user/retrieve'))
+app.get('/user/create', require('./api/_user/create'))
+app.get('/user/retrieve', require('./api/_user/retrieve'))
 
 app.get('/workingHour/create', require('./api/workingHour/create'))
 app.get('/workingHour/update', require('./api/workingHour/update'))

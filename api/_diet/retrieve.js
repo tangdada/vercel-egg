@@ -1,5 +1,5 @@
 // const mongoose = require('mongoose')
-const { Diet } = require('../db')
+const { Diet } = require('../db/_index')
 
 module.exports = async (req, res) => {
     try {
