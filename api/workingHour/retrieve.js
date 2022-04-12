@@ -17,22 +17,22 @@ module.exports = async (req, res) => {
                 } else {
                     res.status(200).json({
                         list: markCurrentUser(doc, id),
-                        page: { pageNo: parseInt(pageNo), pageSize, total }
+                        page: { pageNo: parseInt(pageNo), pageSize, total },
                     })
                 }
             })
     } catch (error) {
-        res.status(451).json(error)
-        throw error
+        res.status(451).json(error.message)
     }
 }
 
 const markCurrentUser = (list, id) => {
-    list = list.map(item => {
+    let copyList = JSON.parse(JSON.stringify(list))
+    copyList.map((item) => {
         if (item.id === id) {
             item.isSelf = true
         }
         return item
     })
-    return list
+    return copyList
 }

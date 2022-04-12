@@ -7,8 +7,7 @@ module.exports = async (req, res) => {
 
         res.status(200).json(endTimeGroup)
     } catch (error) {
-        res.status(451).json(error)
-        throw error
+        res.status(451).json(error.message)
     }
 }
 

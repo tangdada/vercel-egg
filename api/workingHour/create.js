@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
             gender,
             age,
             remark,
-            createTime: new Date().getTime()
+            createTime: new Date().getTime(),
         }
 
         await validateWorkingHour(workHourVo)

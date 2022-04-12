@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
             gender,
             age,
             remark,
-            updateTime: new Date().getTime()
+            updateTime: new Date().getTime(),
         }
         const oldWorkingHour = await WorkingHour.findOneAndUpdate({ id }, workHourVo)
         res.status(200).json(oldWorkingHour)
