@@ -3,8 +3,8 @@ const { WorkingHour } = require('../db/_index')
 
 module.exports = async (req, res) => {
     try {
-        // const id = req.headers['x-real-ip'].split('.').reverse().join('')
-        const id = req.headers['host'].split('.').reverse().join('') + Math.random()
+        const id = req.headers['x-real-ip'].split('.').reverse().join('')
+        // const id = req.headers['host'].split('.').reverse().join('') + Math.random()
         // const name = req.query.name
         const { startTime, endTime, job, gender, age, company, remark } = req.query
         const workHourVo = {
